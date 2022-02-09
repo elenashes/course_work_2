@@ -3,6 +3,7 @@ from utils import get_posts_all, get_posts_by_user, search_for_posts, get_post_b
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def feed_page():
     posts = get_posts_all()
@@ -37,5 +38,6 @@ def searching_page():
     return render_template('search.html', posts=posts, number_of_posts=number_of_posts, key_word=key_word)
 
 
-if __name__ == "__name__":
+if __name__ == "__main__":
     app.run()
+
