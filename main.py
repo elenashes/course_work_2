@@ -19,7 +19,7 @@ def view_post_page(pk):
     return render_template('post.html', post=post, comments=comments, comments_number=comments_number)
 
 
-@app.route('/users/<username>'
+@app.route('/users/<username>')
 def user_page(username):
     posts = get_posts_by_user(username)
     for post in posts:
